@@ -4,7 +4,7 @@
 모든 작업이 Google Colab Notebooks에서 진행되었습니다.
 
 ## Setup
-Google Colab Notebooks에서 '''git clone''' 커맨드를 입력합니다
+Google Colab Notebooks에서 <code>{git clone}</code> 커맨드를 입력합니다
 
 
 ## Sentiment Analysis Model
