@@ -1,4 +1,11 @@
 # 네이버 뉴스 제목 감정분석
 
-## 네이버 영화리뷰 감정분석 모델을 이용해 월별 네이버 뉴스 제목을 감정분석해보았습니다
+## Environment
+모든 작업이 Google Colab Notebooks에서 진행되었습니다.
+
+## Setup
+Google Colab Notebooks에서  git clone 커맨드를 입력합니다
+
+
+## Sentiment Analysis Model
 
