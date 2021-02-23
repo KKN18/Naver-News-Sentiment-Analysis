@@ -7,7 +7,7 @@
 <code> Google Colab Notebooks</code> 에서 <code> git clone</code> 커맨드를 입력합니다.
 
 <code> git clone https://github.com/KKN18/Naver-News-Sentiment-Analysis.git</code>
-  
+
 
 ## Sentiment Analysis Model
 
