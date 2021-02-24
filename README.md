@@ -18,6 +18,8 @@
 [Naver sentiment movie corpus](https://github.com/e9t/nsmc/) 로 학습시킨 BERT 모델을 이용하였습니다.
 
 ## Analysis Result
+그래프의 값이 높을수록 **긍정**적인 헤드라인의 비율이 높았다는 것을 의미합니다.
+
 ![Economy](https://github.com/KKN18/Naver-News-Sentiment-Analysis/blob/main/result/Economy.PNG)
 ![Health](https://github.com/KKN18/Naver-News-Sentiment-Analysis/blob/main/result/Health.PNG)
 ![Social](https://github.com/KKN18/Naver-News-Sentiment-Analysis/blob/main/result/Social.PNG)
