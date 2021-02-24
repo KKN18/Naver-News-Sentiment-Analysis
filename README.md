@@ -17,5 +17,8 @@
 ## Sentiment Analysis Model
 [Naver sentiment movie corpus](https://github.com/e9t/nsmc/) 로 학습시킨 BERT 모델을 이용하였습니다.
 
+## Analysis Result
+(./result/Economy.png)
+
 ## Reference
 [BERT Fine-Tuning Tutorial](https://medium.com/@aniruddha.choudhury94/part-2-bert-fine-tuning-tutorial-with-pytorch-for-text-classification-on-the-corpus-of-linguistic-18057ce330e1)
