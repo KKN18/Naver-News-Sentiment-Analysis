@@ -23,3 +23,4 @@
 
 ## Reference
 [BERT Fine-Tuning Tutorial](https://medium.com/@aniruddha.choudhury94/part-2-bert-fine-tuning-tutorial-with-pytorch-for-text-classification-on-the-corpus-of-linguistic-18057ce330e1)
+[Naver  Crawling](https://bumcrush.tistory.com/116)
