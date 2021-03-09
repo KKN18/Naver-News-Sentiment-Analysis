@@ -1,5 +1,5 @@
 import argparse
-
+import torch
 # -*- coding: utf-8 -*-
 """model.ipynb
 
