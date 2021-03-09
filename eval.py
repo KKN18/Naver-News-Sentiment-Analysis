@@ -15,7 +15,7 @@ import torch
 # !pip install transformers
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_dir', type=str, default='/content/drive/MyDrive/Colab Notebooks/Sentiment Analysis/data/', help='directory of csv file')
+parser.add_argument('--data_dir', type=str, default='/content/drive/MyDrive/Colab Notebooks/Sentiment Analysis/data', help='directory of csv file')
 parser.add_argument('--category', type=str, default='Social', help='category of search')
 parser.add_argument('--save_dir', type=str, default='/content/drive/MyDrive/Colab Notebooks/Sentiment Analysis/saved_model', help='directory to save model')
 opt = parser.parse_args()
@@ -58,7 +58,7 @@ def eval(category):
     date_list = ["2019.12", "2020.01", "2020.02", "2020.03", "2020.04", "2020.05", "2020.06", "2020.07", "2020.08", "2020.09", "2020.10", "2020.11", "2020.12", "2021.01"]
     contents = [[] for i in range(len(date_list))]
     for i in range(len(date_list)):
-      file = pd.read_csv(opt.data_dir + category + '/' + date_list[i] + '.csv')
+      file = pd.read_csv(opt.data_dir + '/' + category + '/' + date_list[i] + '.csv')
       for content in file['title']:
           contents[i].append(content)
     sentiments = []
