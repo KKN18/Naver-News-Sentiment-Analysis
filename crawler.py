@@ -16,7 +16,7 @@ import pandas as pd
 import re
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_dir', type=str, default='/content/drive/MyDrive/Colab Notebooks/Sentiment Analysis/data/', help='directory of csv file')
+parser.add_argument('--data_dir', type=str, default='/content/drive/MyDrive/Colab Notebooks/Sentiment Analysis/data', help='directory of csv file')
 parser.add_argument('--category', type=str, default='Social', help='category of search')
 opt = parser.parse_args()
 print(opt)
@@ -50,7 +50,7 @@ def crawler(maxpage,query,sort,s_date,e_date):
     
     outputFolder = opt.data_dir
     outputFileName = '%s.%s.csv' % (s_from[:4], s_from[4:6])
-    df.to_csv(outputFolder + outputFileName)
+    df.to_csv(outputFolder + '/' + outputFileName)
     
 date_list = ["29", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"]
     
