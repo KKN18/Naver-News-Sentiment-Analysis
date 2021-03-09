@@ -73,4 +73,4 @@ def crawl_every(query):   # 2019년 12월~2021년 1월을 한 번에 크롤링�
     crawler(maxpage,query,sort,s_date,e_date)
 
 # query = input("검색어 입력: ")
-crawl_every(opt.query)
+crawl_every(opt.category)
