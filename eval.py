@@ -54,30 +54,6 @@ def eval_line(line):
 import pandas as pd
 from matplotlib import pyplot as plt
 import numpy as np
-def eval(category):
-    date_list = ["2019.12", "2020.01", "2020.02", "2020.03", "2020.04", "2020.05", "2020.06", "2020.07", "2020.08", "2020.09", "2020.10", "2020.11", "2020.12", "2021.01"]
-    contents = [[] for i in range(len(date_list))]
-    for i in range(len(date_list)):
-      file = pd.read_csv(opt.data_dir + '/' + category + '/' + date_list[i] + '.csv')
-      for content in file['title']:
-          contents[i].append(content)
-    sentiments = []
-    for content in contents:
-        pos = 0
-        neg = 0
-        for line in content:
-            logits = eval_line([line])
-            if np.argmax(logits):
-                pos+=1
-            else:
-                neg+=1
-        sentiments.append(pos / len(content))
-        print(date_list[len(sentiments) - 1] + ' : ' + str(sentiments[len(sentiments) - 1]))
-    print("-------------Finished-------------")
-    plt.figure(figsize=(15, 8))
-    plt.plot(date_list, sentiments)
-    plt.title(category)
-    plt.show()
 
 from transformers import BertForSequenceClassification
 # save_dir = '/content/drive/MyDrive/Colab Notebooks/Sentiment Analysis/saved_model'
@@ -86,6 +62,31 @@ device = "cuda:0"
 model = model.to(device)
 model.eval()
 
-eval(opt.category)
+category = opt.category
+
+date_list = ["2019.12", "2020.01", "2020.02", "2020.03", "2020.04", "2020.05", "2020.06", "2020.07", "2020.08", "2020.09", "2020.10", "2020.11", "2020.12", "2021.01"]
+contents = [[] for i in range(len(date_list))]
+for i in range(len(date_list)):
+    file = pd.read_csv(opt.data_dir + '/' + category + '/' + date_list[i] + '.csv')
+    for content in file['title']:
+        contents[i].append(content)
+sentiments = []
+for content in contents:
+    pos = 0
+    neg = 0
+    for line in content:
+        logits = eval_line([line])
+        if np.argmax(logits):
+            pos+=1
+        else:
+            neg+=1
+    sentiments.append(pos / len(content))
+    print(date_list[len(sentiments) - 1] + ' : ' + str(sentiments[len(sentiments) - 1]))
+print("-------------Finished-------------")
+plt.figure(figsize=(15, 8))
+plt.plot(date_list, sentiments)
+plt.title(category)
+plt.show()
+
 
 
