@@ -6,9 +6,36 @@
 ## Dataset
 **Crawler.ipynb**을 이용해서 검색어별 2019년 12월 뉴스부터 2021년 1월 뉴스의 제목들을 크롤링하였습니다.
 
+## Install Repository
+Naver Sentiment Movie Corpus repository를 설치하는 커맨드입니다.
+
+    git clone https://github.com/e9t/nsmc.git
+
+해당 repository를 설치하는 커맨드입니다.
+
+    git clone https://github.com/KKN18/Naver-News-Sentiment-Analysis.git
+    
+    
 ## Setup
-1. **model.ipynb** 을 실행해 saved_model 폴더에 감정분석 모델을 학습 및 저장합니다.
-2. **eval.ipynb**을 실행해 저장한 모델로 월별 네이버 뉴스 제목을 감정분석합니다.
+    
+1. transformers를 설치합니다.
+
+      <code> pip install transformers</code>
+
+2. 현재 경로를 변경합니다.
+
+      <code> cd Naver-News-Sentiment-Analysis</code> 
+
+3. 감정분석 모델을 학습하고 saved_model 폴더에 저장합니다.
+
+      <code> python model.py --save_dir <saved_model></code>
+ 
+4. 학습한 모델로 월별 네이버 뉴스 제목을 감정분석합니다.
+
+      <code> python eval.py --data_dir <data_dir> --category 'Social' --save_dir <saved_model></code>
+
+
+
 
 ## Sentiment Analysis Model
 [Naver sentiment movie corpus](https://github.com/e9t/nsmc/) 로 학습시킨 BERT 모델을 이용하였습니다.
