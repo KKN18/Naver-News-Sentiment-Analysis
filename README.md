@@ -32,7 +32,7 @@ Naver Sentiment Movie Corpus repository를 설치하는 커맨드입니다.
  
 4. 학습한 모델로 월별 네이버 뉴스 제목을 감정분석합니다.
 
-      <code> python eval.py --data_dir <data> --category 'Social' --save_dir <saved_model></code>
+      <code> python eval.py --data_dir <data_dir> --category 'Social' --save_dir <saved_model></code>
 
 
 
