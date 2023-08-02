@@ -52,3 +52,4 @@ Naver Sentiment Movie Corpus repository를 설치하는 커맨드입니다.
 [BERT Fine-Tuning Tutorial](https://medium.com/@aniruddha.choudhury94/part-2-bert-fine-tuning-tutorial-with-pytorch-for-text-classification-on-the-corpus-of-linguistic-18057ce330e1)
 
 [Naver News Crawling](https://bumcrush.tistory.com/116)
+
